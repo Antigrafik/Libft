@@ -6,7 +6,7 @@
 /*   By: mmurgia- <mmurgia-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 10:15:27 by mmurgia-          #+#    #+#             */
-/*   Updated: 2022/03/31 13:41:27 by mmurgia-         ###   ########.fr       */
+/*   Updated: 2022/04/04 12:51:43 by mmurgia-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 int	main(void)
 {
-	char 	cadena[50];
-	char	str[11] = "Hola quetal";
-	int		c;
+	char	cadena[] ="Hola ";
+	char	str[] = "Mai";
+	//int		c;
 	size_t	n;
 
-	c = '.';
-	n = 6;
-/* 	printf("%d", ft_isalpha(c));
+	//c = '1';
+	n = 2;
+	/* printf("%d", ft_isalpha(c));
 	printf("%d", ft_isdigit(c));
 	printf("%d", ft_isalnum(c));
 	printf("%d", ft_isascii(c));
 	printf("%d", ft_isprint(c));
 	printf("%d", ft_strlen(""));
-	ft_memset(str + 4, c, n);
+	ft_memset(str, c, n);
 	printf("%s\n", str);
-	memset(str + 4 , c, n);
+	memset(str, c, n);
 	printf("%s", str);
 	bzero(str, n);
 	write (1, &str, 11);
@@ -42,9 +42,19 @@ int	main(void)
 	write (1, &cadena, 2);
 	write (1, "\n", 1);
 	ft_memcpy(cadena, str, n);
-	write (1, &cadena, 2); */
+	write (1, &cadena, 2);
 	ft_memmove(cadena, str, n);
 	printf("%s\n", cadena);
 	memmove(cadena, str, n);
 	printf("%s\n", cadena);
+	ft_strlcpy(cadena, str, n);
+	printf("%s\n", cadena);
+	strlcpy(cadena, str, n);
+	printf("%s\n", cadena); */
+	ft_strlcat(cadena, str, n);
+	printf("%s\n", cadena);
+	printf("%zu\n", ft_strlcat(cadena, str, n));
+	strlcat(cadena, str, n);
+	printf("%s\n", cadena);
+	printf("%lu\n", strlcat(cadena, str, n));
 }
