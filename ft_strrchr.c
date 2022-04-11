@@ -6,7 +6,7 @@
 /*   By: mmurgia- <mmurgia-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 12:15:42 by mmurgia-          #+#    #+#             */
-/*   Updated: 2022/04/06 12:27:11 by mmurgia-         ###   ########.fr       */
+/*   Updated: 2022/04/11 10:22:44 by mmurgia-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	while (i >= 0)
 	{
-		if (str[i] == c)
+		if (str[i] == (unsigned char)c)
 			return (&str[i]);
 		i--;
 	}

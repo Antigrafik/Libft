@@ -6,7 +6,7 @@
 /*   By: mmurgia- <mmurgia-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 11:09:33 by mmurgia-          #+#    #+#             */
-/*   Updated: 2022/04/07 11:18:05 by mmurgia-         ###   ########.fr       */
+/*   Updated: 2022/04/11 10:40:59 by mmurgia-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
-	while ((str1[i] != '\0' || str2[i] != '\0') && (i < n))
+	while (i < n)
 	{
-		if (str1[i] < str2[i])
-		{
-			return (str1[i] - str2[i]);
-		}
-		else if (str1[i] > str2[i])
+		if (str1[i] != str2[i])
 		{
 			return (str1[i] - str2[i]);
 		}
@@ -38,14 +34,14 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 /* int	main(void)
 {
-	char	*s1;
-	char	*s2;
+	char	*s1 = "Hola";
+	char	*s2 = "Homa";
+	char	s1[] = {0, 0, 127, 0};
+	char	s2[] = {0, 0, 42, 0};
 	int		i;
 	int		n;
 
-	s1 = "fd";
-	s2 = "fhyy";
-	n = 2;
+	n = 4;
 	i = memcmp(s1, s2, n);
 	printf("Funcion Original: %d\n", i);
 	i = ft_memcmp(s1, s2, n);
