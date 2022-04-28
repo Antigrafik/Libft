@@ -6,7 +6,7 @@
 /*   By: mmurgia- <mmurgia-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 10:16:08 by mmurgia-          #+#    #+#             */
-/*   Updated: 2022/04/13 10:45:16 by mmurgia-         ###   ########.fr       */
+/*   Updated: 2022/04/15 13:05:02 by mmurgia-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	str1;
 	size_t	str2;
 
+	if (!s1 || !s2)
+		return (NULL);
 	str1 = ft_strlen(s1);
 	str2 = ft_strlen(s2);
 	newstr = (char *)malloc(str1 + str2 + 1);

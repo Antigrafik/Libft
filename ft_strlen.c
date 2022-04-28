@@ -6,11 +6,13 @@
 /*   By: mmurgia- <mmurgia-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 12:21:38 by mmurgia-          #+#    #+#             */
-/*   Updated: 2022/03/29 12:21:25 by mmurgia-         ###   ########.fr       */
+/*   Updated: 2022/04/26 12:47:10 by mmurgia-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 

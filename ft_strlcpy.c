@@ -6,11 +6,11 @@
 /*   By: mmurgia- <mmurgia-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 10:28:24 by mmurgia-          #+#    #+#             */
-/*   Updated: 2022/04/04 12:40:44 by mmurgia-         ###   ########.fr       */
+/*   Updated: 2022/04/12 11:41:33 by mmurgia-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
@@ -19,17 +19,13 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 	i = 0;
 	j = 0;
-	if (src == NULL || dst == NULL)
-	{
-		return (0);
-	}
 	while (src[i] != '\0')
 	{
 		i++;
 	}
-	if (dstsize != 0)
+	if (dstsize > 0)
 	{
-		while (j < (dstsize - 1) && src[j] != '\0')
+		while (j < (dstsize - 1) && src[j])
 		{
 			dst[j] = src[j];
 			j++;
@@ -38,3 +34,17 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	return (i);
 }
+
+/* int	main(void)
+{
+	char	cadena[] ="";
+	size_t	n;
+	char	str[] = "";
+
+	n = 4;
+	ft_strlcpy(cadena, str, n);
+	printf("Mai funcion: %s\n", cadena);
+	strlcpy(cadena, str, n);
+	printf("Original funcion: %s\n", cadena);
+}
+ */

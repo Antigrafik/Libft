@@ -6,7 +6,7 @@
 /*   By: mmurgia- <mmurgia-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 11:27:29 by mmurgia-          #+#    #+#             */
-/*   Updated: 2022/04/14 12:27:32 by mmurgia-         ###   ########.fr       */
+/*   Updated: 2022/04/19 09:56:08 by mmurgia-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr_fd(char *s, int fd)
 	unsigned int	len;
 	unsigned int	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	len = ft_strlen(s);
 	while (i < len)
